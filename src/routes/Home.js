@@ -4,7 +4,8 @@ import MyNavbar from '../components/MyNavbar.js';
 import Hero from '../components/Hero.js';
 import Card from '../components/Card.js';
 import Button from '../components/Button.js';
-import navLogo from '../assets/logo-nav.png';
+import Footer from '../components/Footer.js';
+import Logo from '../assets/logo-nav.png';
 import shipImage from '../assets/ship.png';
 import TextBlock from '../components/TextBlock.js';
 import { ShieldSharp, NavigateNextOutlined } from "@ricons/material";
@@ -16,13 +17,13 @@ function App() {
     <div className="container-fluid">
       <div className="container">
         <MyNavbar
-          logo={navLogo}
+          logo={Logo}
           logo_name="QuantumSky Solutions"
           items={[
             { text: 'Home', href: "/" },
             { text: 'Solutions', href: "/contact", disabled: true },
-            { text: 'About us', href: "/about", disabled: true},
-            { text: 'Pricing', href: "/pricing", disabled: true},
+            { text: 'About us', href: "/about", disabled: true },
+            { text: 'Pricing', href: "/pricing", disabled: true },
             { text: 'Contact', href: "/contact" },
           ]}
         />
@@ -198,30 +199,20 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-dark">
-        <div className="container text-light">
-          <div className="row">
-            <div className="col mt-3 d-flex">
-              <img src={navLogo} className="img footer-logo" alt="logo"></img>
-              <p className="fs-3">QuantumSky Solutions</p>
-            </div>
-            <div className="col mt-3">
-              <ul className="footer-nav">
-                <h4 className="fw-bold">Navigation</h4>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Solutions</a></li>
-                <li><a href="/">About us</a></li>
-                <li><a href="/">Pricing</a></li>
-                <li><a href="/">Contact</a></li>
-              </ul>
-            </div>
-            <div className="col mt-3">
-              <h3>About us</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer
+        logo={Logo}
+        logo_name="QuantumSky Solutions"
+        list_name='Navigation'
+        items={[
+          { text: 'Home', href: "/" },
+          { text: 'Solutions', href: "/contact", disabled: true },
+          { text: 'About us', href: "/about", disabled: true },
+          { text: 'Pricing', href: "/pricing", disabled: true },
+          { text: 'Contact', href: "/contact" },
+        ]}
+        textbox_title='About us'
+        textbox_content={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"}
+      />
     </div>
   );
 }

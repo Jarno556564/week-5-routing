@@ -1,17 +1,18 @@
 // Contact.js
 import '../App.scss';
 import MyNavbar from '../components/MyNavbar.js';
-import navLogo from '../assets/logo-nav.png';
+import Logo from '../assets/logo-nav.png';
 import Input from '../components/Input.js';
 import Textarea from '../components/Textarea.js';
 import Button from '../components/Button.js'
+import Footer from '../components/Footer.js'
 
 export default function Contact() {
     return (
         <div className="container-fluid">
             <div className="container">
                 <MyNavbar
-                    logo={navLogo}
+                    logo={Logo}
                     logo_name="QuantumSky Solutions"
                     items={[
                         { text: 'Home', href: "/" },
@@ -47,7 +48,26 @@ export default function Contact() {
                 />
 
                 <Button text="Submit" />
+
             </div>
+
+            <div className="container-fluid position-absolute bottom-0">
+                <Footer
+                    logo={Logo}
+                    logo_name="QuantumSky Solutions"
+                    list_name='Navigation'
+                    items={[
+                        { text: 'Home', href: "/" },
+                        { text: 'Solutions', href: "/contact", disabled: true },
+                        { text: 'About us', href: "/about", disabled: true },
+                        { text: 'Pricing', href: "/pricing", disabled: true },
+                        { text: 'Contact', href: "/contact" },
+                    ]}
+                    textbox_title='About us'
+                    textbox_content={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"}
+                />
+            </div>
+
         </div>
     );
 }
