@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-function Footer({ logo, logo_name, list_name, items, disabled, textbox_title, textbox_content }) {
+function Footer({ logo, logo_name, list_name, items, textbox_title, textbox_content }) {
     return (
         <div className="bg-dark">
             <div className="container text-light">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function MyNavbar({ logo, items, logo_name, disabled }) {
+function MyNavbar({ logo, items, logo_name }) {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
